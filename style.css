@@ -5,7 +5,7 @@
 .column {
     float: left;
     width: 50%;
-    height: 300px;
+    height: 400px;
 }
 
 /* Clear floats after the columns */
