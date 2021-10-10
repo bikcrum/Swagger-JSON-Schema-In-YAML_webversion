@@ -1,7 +1,7 @@
 /**
  * Created by Bikram Pandit on 8/18/2018.
  */
-function submit() {
+ function submit() {
     let s = document.getElementById("json_data").value;
     document.getElementById('yaml_out').value = '';
     let json_object = JSON.parse(s);
@@ -26,6 +26,8 @@ function parse(s, indent) {
         } else {
             write(indent + '  type: object');
         }
+    } else if (s === null) {
+        write(indent + 'type: string');
     } else if (typeof s === 'object') {
         write(indent + 'type: object');
         if (isEmpty(s)) {
